@@ -1,9 +1,9 @@
 import xlsxwriter
 from PIL import Image
 
-textfile = open('/Users/Shanyl/Documents/Python_Projects/PythonWordtoImage/PythonReferral.txt', 'r')
-image = Image.open("/Users/Shanyl/Documents/Python_Projects/PythonWordtoImage/Bee.jpg", 'r')
-bgimage = Image.open("/Users/Shanyl/Documents/Python_Projects/PythonWordtoImage/Beebackground.jpg", 'r')
+textfile = open('PythonReferral.txt', 'r')
+image = Image.open("Bee.jpg", 'r')
+bgimage = Image.open("Beebackground.jpg", 'r')
 pixval = list(image.getdata())
 bgpixval = list(bgimage.getdata())
 
@@ -81,7 +81,7 @@ for x in range(0, 252, 1):
     bghexcolpix.append(temp)
     temp = []
 
-Xfile = xlsxwriter.Workbook('/Users/Shanyl/Documents/Python_Projects/PythonWordtoImage/Output.xlsx')
+Xfile = xlsxwriter.Workbook('Output.xlsx')
 Xsheet = Xfile.add_worksheet()
 for i in range(0, 252, 1):
     Xsheet.set_row(i, 18)
